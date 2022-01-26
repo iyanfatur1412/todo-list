@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 96vw;
+    min-height: 96vh;
+    border: 2px dashed #167d7f;
+    margin: 10px auto 0;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.6em;
+    margin-top: 50px;
+}
+
+.col {
+    width: 80vw;
+    margin: 30px auto 0;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+}
+
+.form input {
+    flex-grow: 2;
+    outline: none;
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+.form button {
+    padding: 5px 15px;
+    outline: none;
+    background-color: #29a0b1;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #fff;
+}
+
+#edit {
+    display: none;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a0b1;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.slide {
+    animation: slide .8s ease forwards;
+}
+
+li span {
+    cursor: pointer;
+    padding: 5px;
+    transition: .3s;
+}
+
+li span:hover {
+    color: crimson;
+}
+
+@media screen and (min-width: 1024px) {
+    .col {
+        width: 50vw;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
